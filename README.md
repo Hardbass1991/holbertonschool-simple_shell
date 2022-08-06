@@ -61,7 +61,7 @@ write (man 2 write)
  -You should have an AUTHORS file at the root of your repository, listing all individuals having contributed content to the repository. Format, see Docker
 
 1.Betty would be proud
- -Write a beautiful code that passes the Betty check
+ -Write a beautiful code that passes the Betty checks
 
 2.Simple shell 0.1
  -Write a UNIX command line interpreter.
@@ -114,19 +114,64 @@ Write a blog post describing step by step what happens when you type ls -l *.c a
 
 When done, please add all urls below (blog post, LinkedIn post, etc.)
 
-(aqui va el link de nuestro blog)
+https://medium.com/@cesarjulianzeabravo/what-happens-if-you-type-ls-l-c-dfb65c7a1ce8
 ## Function prototypes
 All function prototypes used to compile the Simple Shell are included in the **missing.h** header file:
+*list_t *add_node_end(list_t **head, const char *str);
+*char **tokenize_line(char *line);
+*void print_env();
+*char *get_full_command(char *command);
+*extern char **environ;
 
 ## File description
 
+* **simple_shell.c** - contains the shell function
+* **tokenize_line.c** - contains the function **tokenize_line()
+* **print_env.c** - contains the function print_env()
+* **3-add_node_end.c** - contains the function *add_node_end()
+* **man_1_simple_shell** - man page for shell function
+* **main.h** - contains all headers, prototypes and structure declaration.
+* **get_full_command.c** - contains the function *get_full_command(char *command)
+
 ## Function description
 
-## Examples
+* **simple_shell.c** - this function generates an input to the user so that he can enter in search of running a command entered by parameters or from the same PATH address..
+* **tokenize_line.c** - save what the user entered and create an array where it saves each character.
+* **print_env.c** - print all environment variables.
+* **3-add_node_end.c** - creates a copy of the input and separates it into a space in memory.
+* **get_full_command.c** - saves the entered line, checks if the first element entered is "/" to know if it exists, otherwise, we modify.
 
-**Return value:**
+## Examples
+0.printenv with environ
+  -Write a program that prints the environment using the global variable environ.
+     #include <stdio.h>
+
+int main(void)
+{
+        extern char **environ;
+        int i = 0;
+
+        for (; *environ != NULL; i++)
+        {
+                printf("%s\n", environ[i]);
+        }
+
+        return (0);
+}
+
+1.env vs environ
+  -Write a program that prints the address of env (the third parameter of the main function) and environ (the global variable). Are they they same? Does this make sense?
+
+int main (int argc, char **argv, char **env)
+{
+        extern char **environ;
+        printf("%p\n", env);
+        printf("%p\n", environ);
+        return (0);
+}
+
 ## Author
 ##### Kevin Barzola
 Cohort 18
 ##### Julian Zea
-Cohort 18s
+Cohort 18
