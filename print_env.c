@@ -1,7 +1,9 @@
-#include <stdio.h>
-void print_env()
+#include "main.h"
+/**
+ * print_env - prints environment variables (one per line)
+ */
+void print_env(void)
 {
-	extern char **environ;
 	int i = 0;
 
 	while (environ[i])

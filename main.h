@@ -24,7 +24,7 @@ extern char **environ;
 
 list_t *add_node_end(list_t **head, const char *str);
 char **tokenize_line(char *line);
-void print_env();
+void print_env(void);
 char *get_full_command(char *command);
 char *PATH_to_dirs();
 int get_num_words(char *line);
