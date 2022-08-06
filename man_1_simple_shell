@@ -1,0 +1,63 @@
+.TH man Shell
+
+.SH NAME
+.B Simple Shell
+- a particular implementation of shell function.
+
+.SH SYNOPSIS
+sh [-abCefhimnuvx] [-o option]... [+abCefhimnuvx] [+o option]...
+           [command_file [argument...]]
+
+.SH COMMAND HISTORY LIST
+the type, the size and internal format of this file are not specified.
+
+.TP
+ The sh is used interactively, it should keep a list of previously entered commands from the terminal in the file named by the HISTFILE environment variable.
+
+.SH COMMAND LINE EDITING
+
+-Emacs
+-Vi
+-Vim
+
+.TP
+can be edited using text editors on the command line in vi mode. This mode uses commands, described below, similar to a subset of those described in the vi utility. Implementations may offer other command line editing modes like emacs and vim.
+
+.SH DESCRIPTION
+sh is a command language interpreter that we can execute commands read from a command line string or a specified file
+
+
+.SH OPTIONS
+We handle the shell flags:
+.br
+.B touch
+- standard UNIX/Linux command to create, change, and modify file timestamps. You can only create empty files.
+.br
+.B man
+- Provides information about commands or other programs in the Linux environment
+.br
+.B cd
+- Change the directory in which we are positioned.
+.br
+.B mkdir
+- Create directories and directory entries.
+.br
+.B rmdir
+-Remove empty directory entries.
+.br
+.B ls
+- List the contents of a directory. If used with no arguments, it lists the contents of the current directory.
+
+ls PARAMETERS
+.B -a shows us the hidden files
+.B -t Sorts files by modification date.
+.B -X Sort files by extension.
+.B -l It shows all the information: user, group, permissions, size, date and time of creation.
+.B -R Shows the contents of all subdirectories recursively.
+.B -S Sort the results by file size.
+
+.SH SEE ALSO
+sh(1p)
+
+.SH AUTHOR
+Kevin Barzola / Julian Zea
