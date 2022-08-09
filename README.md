@@ -145,7 +145,7 @@ All function prototypes used to compile the Simple Shell are included in the **m
 0.printenv with environ
   -Write a program that prints the environment using the global variable environ.
      #include <stdio.h>
-
+```c
 int main(void)
 {
         extern char **environ;
@@ -158,10 +158,12 @@ int main(void)
 
         return (0);
 }
+```
 
 1.env vs environ
   -Write a program that prints the address of env (the third parameter of the main function) and environ (the global variable). Are they they same? Does this make sense?
 
+```c
 int main (int argc, char **argv, char **env)
 {
         extern char **environ;
@@ -169,6 +171,7 @@ int main (int argc, char **argv, char **env)
         printf("%p\n", environ);
         return (0);
 }
+```
 
 ## Author
 ##### Kevin Barzola
