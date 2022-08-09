@@ -56,6 +56,32 @@ ls PARAMETERS
 .B -R Shows the contents of all subdirectories recursively.
 .B -S Sort the results by file size.
 
+.SH EXAMPLE
+
+int main(void)
+{
+        extern char **environ;
+        int i = 0;
+
+        for (; *environ != NULL; i++)
+        {
+                printf("%s\n", environ[i]);
+        }
+
+        return (0);
+}
+
+
+
+int main (int argc, char **argv, char **env)
+{
+        extern char **environ;
+        printf("%p\n", env);
+        printf("%p\n", environ);
+        return (0);
+}
+
+
 .SH SEE ALSO
 sh(1p)
 
